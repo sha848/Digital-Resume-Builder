@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Combined Resume Builder Pages</title>
+  
+  <!-- CSS for Resume Builder Landing Page (login1.css) -->
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #eaf6ff; /* Light blue background */
+      color: #2c3e50;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background-color: #0074cc; /* Dark blue */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-links li {
+      margin-left: 20px;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
+    
+    .resume-button {
+      background-color: #1d9bf0; /* Light blue for call-to-action */
+      padding: 8px 18px;
+      border-radius: 25px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    
+    .hero {
+      display: flex;
+      padding: 60px;
+    }
+    
+    .left-section {
+      flex: 1;
+    }
+    
+    .right-section {
+      flex: 1;
+      padding-left: 40px;
+    }
+    
+    .resume-preview {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      width: 80%;
+    }
+    
+    .resume-header {
+      border-bottom: 2px solid #bbb;
+      padding-bottom: 10px;
+    }
+    
+    .resume-body {
+      margin-top: 15px;
+    }
+    
+    .template-btn {
+      background-color: #0056a3; /* Darker blue button */
+      color: white;
+      padding: 8px 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    
+    h1 {
+      font-size: 40px;
+      color: #003366; /* Deep blue heading */
+    }
+    
+    p {
+      margin: 10px 0;
+      color: #4f6f8a;
+    }
+    
+    .cta-buttons {
+      margin-top: 20px;
+    }
+    
+    .cta-button {
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+    
+    .create {
+      background-color: #00509e; /* Blue CTA button */
+      color: white;
+      margin-right: 15px;
+    }
+    
+    .import {
+      background-color: white;
+      color: #00509e;
+      border: 2px solid #00509e;
+    }
+    
+    .stats {
+      display: flex;
+      margin-top: 30px;
+    }
+    
+    .stat {
+      margin-right: 50px;
+    }
+    
+    .stat h3 {
+      color: #0074cc; /* Light blue for stat numbers */
+    }
+    
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background-color: #00509e;
+      color: white;
+    }
+    
+    .logos img {
+      margin: 0 10px;
+    }
+  </style>
+  
+  <!-- CSS for Three Simple Steps (2.css) -->
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #e6f3ff;  /* Light blue background */
+      color: #333;
+    }
+    
+    /* Navbar Styling */
+    .navbar {
+      padding: 20px 50px;
+      background-color: #0056b3;  /* Dark Blue */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+    }
+    
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+    
+    .build-button {
+      background-color: #007bff;  /* Bright blue */
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    
+    /* Main Section */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    .steps-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    
+    .text-content {
+      max-width: 50%;
+    }
+    
+    h1 {
+      font-size: 36px;
+      color: #0a4270;  /* Darker text */
+      margin-bottom: 20px;
+    }
+    
+    .steps {
+      margin-top: 20px;
+    }
+    
+    .step {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .step-number {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: #0056b3;  /* Blue */
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    
+    .step p {
+      font-size: 16px;
+      color: #333;
+    }
+    
+    .image-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    
+    .resume-img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .next-button {
+      background-color: #007bff;  /* Bright Blue Button */
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    
+    /* Footer */
+    .footer {
+      background-color: #0056b3;  /* Footer Blue */
+      padding: 20px 0;
+      color: white;
+      text-align: center;
+    }
+    
+    .footer p {
+      font-size: 14px;
+    }
+    
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    .footer-links {
+      margin: 10px 0;
+    }
+  </style>
+  
+  <!-- CSS for Enhanced Digital Resume Builder (3.css) -->
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    body {
+      background-color:  #0a4b6e;  /* Blue background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .form-container {
+      background-color: #e6f7ff;  /* Light Blue for the form background */
+      border-radius: 10px;
+      padding: 20px 30px;
+      width: 400px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #004f8c;  /* Darker Blue for heading */
+    }
+    
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #004e87;
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #004e87;
+      border-radius: 5px;
+      background-color: #f0faff;
+    }
+    
+    input::placeholder, textarea::placeholder {
+      color: #7a9fbf;
+    }
+    
+    textarea {
+      resize: vertical;
+      min-height: 60px;
+    }
+    
+    button {
+      width: 100%;
+      background-color: #008cdd;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #005f9c;
+    }
+  </style>
+  
+  <!-- CSS for Login Page (login.css) -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8f8f5; /* Fresh mint background */
+      color: #333;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff8dc;  /* Light warm yellow for a friendly look */
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4a4e69; /* Dark slate blue */
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #4a4e69;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 2px solid #ffd700;  /* Bright yellow borders */
+      border-radius: 4px;
+      background-color: #f5f5f5;
+    }
+    
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff4500;  /* Bright orange-red button */
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+    button:hover {
+      background-color: #d43f00;
+    }
+    
+    .resume-preview {
+      margin-top: 30px;
+      display: none;
+      padding: 20px;
+      background: #f4f1de; /* Light cream background */
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .resume-preview h2 {
+      margin-bottom: 15px;
+      color: #007acc; /* Cool blue */
+    }
+    
+    #download-btn {
+      background-color: #007bff;  /* Bright blue download button */
+      border-radius: 30px;
+      margin-top: 15px;
+      padding: 10px;
+    }
+    
+    #download-btn:hover {
+      background-color: #0056b3;
+    }
+    
+    textarea::placeholder, input::placeholder {
+      color: #555;
+    }
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #ff4500;  /* Focused orange border */
+      background-color: #fffbe0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Section 1: Resume Builder Landing Page -->
+  <section id="landing-page">
+    <nav class="navbar">
+      <div class="logo">Resume Builder</div>
+      <ul class="nav-links">
+        <li><a href="#">Resume Builder App</a></li>
+        <li><a href="#">Resume Examples</a></li>
+        <li><a href="#">Resume Templates</a></li>
+        <li><a href="#">Cover Letter Builder</a></li>
+        <li><a href="#">Career Center</a></li>
+      </ul>
+      <a href="#" class="resume-button">Build My Resume</a>
+    </nav>
+
+    <main class="hero">
+      <div class="left-section">
+        <div class="resume-preview">
+          <div class="resume-header">
+            <h3>Jessica Lang</h3>
+            <p>Registered Nurse</p>
+          </div>
+          <div class="resume-body">
+            <p>A Registered Nurse with three years of experience delivering healthcare services to diverse populations...</p>
+            <ul>
+              <li>Work Experience: Completed 150-hour precision internship at Tampa Hospital.</li>
+              <li>Education: B.Sc. in Nursing, Tampa University.</li>
+            </ul>
+            <button class="template-btn">Templates & Colors</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <h1>The Best Online Resume Builder</h1>
+        <p>Easily create a resume for any job using our best-in-class resume builder platform.</p>
+        <div class="cta-buttons">
+          <a href="#" class="cta-button create">Create My Resume Now</a>
+          <a href="#" class="cta-button import">Import Resume</a>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <h3>↑ 54%</h3>
+            <p>More interviews</p>
+          </div>
+          <div class="stat">
+            <h3>↑ 46%</h3>
+            <p>More likely to get a job offer</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p style="color: black;">Subscribers have been hired by:</p>
+      <div class="logos">
+        <img src="https://i.pinimg.com/736x/cc/6d/9c/cc6d9c27ef60a229170417b2e66e64d9.jpg" alt="Facebook" height="150px">
+        <img src="https://i.pinimg.com/736x/d0/cc/a2/d0cca26072328c86d852daa2de5bffb5.jpg" alt="Google" height="150px">
+      </div>
+    </footer>
+  </section>
+
+  <!-- Section 2: Three Simple Steps -->
+  <section id="three-simple-steps">
+    <header class="navbar">
+      <div class="logo">Resume Builder</div>
+    </header>
+
+    <main class="container">
+      <section class="steps-section">
+        <div class="text-content">
+          <h1>Just three simple steps</h1>
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <p><strong>Select</strong> a template from our library of professional designs</p>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <p><strong>Build</strong> your resume with our industry-specific bullet points</p>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <p><strong>Customize</strong> the details and wrap it up. You’re ready to send!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="image-content">
+          <img src="https://i.pinimg.com/736x/78/b3/bf/78b3bf1bd39d37168987f58f790eb767.jpg" alt="Resume Preview" class="resume-img">
+          <button class="next-button">Next</button>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>By clicking above, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+        <nav class="footer-links">
+          <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a> | 
+          <a href="#">Accessibility</a> | <a href="#">Contact Us</a>
+        </nav>
+        <p>&copy; 2025, Your Company. All rights reserved.</p>
+      </footer>
+    </main>
+  </section>
+
+  <!-- Section 3: Enhanced Digital Resume Builder -->
+  <section id="digital-resume-builder">
+    <div class="form-container">
+      <h1>Digital Resume Builder</h1>
+      <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+        <label for="education">Education:</label>
+        <textarea id="education" placeholder="Enter your educational background" required></textarea>
+
+        <label for="experience">Work Experience:</label>
+        <textarea id="experience" placeholder="Describe your work experience"></textarea>
+
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills" placeholder="Enter your key skills (e.g., Python, Leadership)" required>
+
+        <label for="profile-summary">Profile Summary:</label>
+        <textarea id="profile-summary" placeholder="Write a brief professional summary"></textarea>
+
+        <label for="linkedin">LinkedIn Profile:</label>
+        <input type="url" id="linkedin" placeholder="Enter your LinkedIn profile link">
+
+        <button type="submit">Generate Resume</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Section 4: Login Page -->
+  <section id="login-page">
+    <div class="full">
+      <div class="login-form">
+        <div class="header">
+          <div class="container">
+            <div class="navbar">
+              <div class="logo">
+                <img src="https://files.oaiusercontent.com/file-KQGRcHMeZFPJ7yMSAfDbfo?se=2025-03-26T15%3A11%3A25Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D5f4957ec-31cf-41f9-a418-0af13d9756f8.webp&sig=51iESnajrUaygX4PtVjgfTMJhS34lq5EVJKQayGTH%2BY%3D" width="125px" alt="Logo">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="login-container">
+          <h1 style="color: rgb(47, 6, 6);">Digital Resume Builder</h1>
+          <h2>Login to Your Account</h2>
+          <form id="loginForm" method="POST" action="login.php">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <div class="captcha">
+              <label for="captcha-input">Enter Captcha</label>
+              <div class="preview"></div>
+              <div class="captcha-form">
+                <input type="text" id="captcha-form" placeholder="Enter captcha text">
+                <button type="button" class="captcha-refresh">
+                  <i class="fa fa-refresh"></i>
+                </button>
+              </div>
+            </div>
+            <a href="index.html"><input type="submit" value="Sign in" id="login-btn"></a>
+          </form>
+        </div>
+        <p style="text-align: center;">Don't have an account? <a href="register.html">Register here</a></p>
+      </div>
+
+      <footer>
+        <div class="footer">
+          <div class="container">
+            <p>Copyrights 2024 - Easy Tutorials</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </section>
+  
+  <!-- JavaScript (from the login page) -->
+  <script>
+    (function(){
+      const fonts = ["cursive","sans-serif","monospace"];
+      let captchaValue = "";
+      function generateCaptcha(){
+        let value = btoa(Math.random()*1000000000);
+        value = value.substr(0, 5 + Math.random()*5);
+        captchaValue = value;
+      }
+      function setCaptcha() {
+        let html = captchaValue.split("").map((char)=>{
+          const rotate = 20 + Math.trunc(Math.random()*30);
+          const font = Math.trunc(Math.random()*fonts.length);
+          return <span style="transform:rotate(${rotate}deg); font-family:${fonts[font]};">${char}</span>;
+        }).join("");
+        document.querySelector(".login-form .captcha .preview").innerHTML = html;
+      }
+      function initCaptcha() {
+        document.querySelector(".login-form .captcha .captcha-refresh").addEventListener("click", function(){
+          generateCaptcha();
+          setCaptcha();
+        });
+        generateCaptcha();
+        setCaptcha();
+      }
+      initCaptcha();
+      
+      document.querySelector(".login-form #login-btn").addEventListener("click", function(){
+        let inputCaptchaValue = document.querySelector(".login-form .captcha-form .captcha-input") ? document.querySelector(".login-form .captcha-form .captcha-input").value : "";
+        if(inputCaptchaValue === captchaValue){
+          // Example using swal (if included)
+          console.log("Logging In!");
+        } else {
+          console.log("Invalid captcha");
+        }
+      });
+    })();
+
+    function validatePassword(password) {
+      const minLength = 8;
+      const hasUppercase = /[A-Z]/.test(password);
+      const hasLowercase = /[a-z]/.test(password);
+      const hasNumber = /[0-9]/.test(password);
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+    
+      if (password.length < minLength) {
+          return "Password must be at least 8 characters long.";
+      }
+      if (!hasUppercase) {
+          return "Password must contain at least one uppercase letter.";
+      }
+      if (!hasLowercase) {
+          return "Password must contain at least one lowercase letter.";
+      }
+      if (!hasNumber) {
+          return "Password must contain at least one number.";
+      }
+      if (!hasSpecialChar) {
+          return "Password must contain at least one special character.";
+      }
+      
+      return "Password is valid.";
+    }
+    
+    // Usage example:
+    const password = "MySecureP@ss123";
+    const validationMessage = validatePassword(password);
+    console.log(validationMessage); // Outputs: Password is valid.
+  </script>
+</body>
+</html>
